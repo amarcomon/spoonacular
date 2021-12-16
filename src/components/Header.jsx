@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Header = () => {
   return (
@@ -8,7 +9,10 @@ export const Header = () => {
         <img className={style.imgLogo} src="./logo192.png" alt="React Logo" />
       </Link>
 
-      <Link className={style.link} to="/recipes">Recipes</Link>
+      <Link className={style.link} to="/recipes">
+        <FontAwesomeIcon className={style.icon} icon="book" />
+        Recipes
+      </Link>
     </div>
   );
 };
