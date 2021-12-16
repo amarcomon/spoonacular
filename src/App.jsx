@@ -4,7 +4,7 @@ import { Main } from "./pages/main/Main";
 import { Recipes } from "./pages/recipes/Recipes";
 import { Header } from "./components/Header";
 
-export default function App() {
+export const App = () => {
   return (
     <Router>
       <Header />
@@ -14,4 +14,4 @@ export default function App() {
       </Routes>
     </Router>
   );
-}
+};

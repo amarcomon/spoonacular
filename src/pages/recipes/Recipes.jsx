@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import {get} from "../../utils/httpClient";
 
-export function Recipes() {
+export const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        get("recipes/findByIngredients").then((randomRecipes) => {
-            setRecipes((prevRecipes) => prevRecipes.concat(randomRecipes));
-            console.log(recipes);
+        get("recipes/random").then((randomRecipes) => {
+            setRecipes((randomRecipes) => recipes.concat(randomRecipes));
+            console.log(randomRecipes);
         })
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
