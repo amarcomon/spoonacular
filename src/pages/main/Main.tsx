@@ -1,10 +1,3 @@
 export const Main = () => {
-  type Title = {
-    title: string;
-  }
-
-  const titleText: Title = {title: 'Main Component'};
-  
-  return (<h1>{titleText.title}</h1>)
-  
+  return <h1>Main Component</h1>;
 };

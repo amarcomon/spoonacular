@@ -1,4 +1,8 @@
-export interface Recipe {
+export interface IRecipes {
+  recipes: Array<IRecipe>
+}
+
+export interface IRecipe {
   aggregateLikes: number;
   cheap: boolean;
   creditsText: string;
